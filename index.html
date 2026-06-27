@@ -23,6 +23,13 @@
 
   .container{max-width:1280px;margin:0 auto;padding:64px 24px}
   .section-title{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:42px;margin-bottom:8px}
+  .status-badge{display:inline-flex;align-items:center;gap:10px;font-family:Inter,system-ui,sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:18px;border:1.5px solid}
+  .status-badge .dot{width:8px;height:8px;border-radius:50%;display:inline-block;box-shadow:0 0 12px currentColor}
+  .status-badge.approved{background:rgba(34,197,94,.12);border-color:#22c55e;color:#22c55e}
+  .status-badge.approved .dot{background:#22c55e}
+  .status-badge.hold{background:rgba(239,68,68,.12);border-color:#ef4444;color:#ef4444}
+  .status-badge.hold .dot{background:#ef4444;animation:pulse 1.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
   .section-sub{color:var(--muted);font-size:14px;margin-bottom:36px;letter-spacing:.05em}
 
   .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-bottom:80px}
@@ -101,6 +108,7 @@
   </div>
 
   <div>
+    <div class="status-badge approved"><span class="dot"></span>Approved · Ready to upload</div>
     <div class="section-title">Ad 1 — Share &amp; Win Leadgen</div>
     <div class="section-sub">Single Paris cafe cut · 8s · Bastille Day · Flight to Paris giveaway</div>
     <div class="grid">
@@ -165,6 +173,7 @@
   </div>
 
   <div>
+    <div class="status-badge approved"><span class="dot"></span>Approved · Ready to upload</div>
     <div class="section-title">Ad 2 — Share &amp; Win Montage</div>
     <div class="section-sub">5 segments · 28s · Card · Patrouille · Crowd · Card · Fireworks</div>
     <div class="grid">
@@ -229,6 +238,7 @@
   </div>
 
   <div>
+    <div class="status-badge hold"><span class="dot"></span>Do not upload · Prize-count mismatch with Ad 1 / Ad 2 / captions</div>
     <div class="section-title">Ad 3 — Banners &amp; Reels Drop</div>
     <div class="section-sub">Two feed banners · two vertical reels · Flight to Paris giveaway · Bastille Day</div>
     <div class="grid">
