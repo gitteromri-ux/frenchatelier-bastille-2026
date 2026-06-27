@@ -121,6 +121,36 @@
   .warn-line{display:flex;gap:10px;padding:12px 16px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:10px;margin-bottom:20px;font-size:12.5px;color:#fcd34d;line-height:1.5}
   .warn-line b{color:#fde68a}
   .warn-line code{font-family:ui-monospace,monospace;background:rgba(245,158,11,.15);padding:1px 6px;border-radius:4px;font-size:11.5px}
+  .manual-step{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:22px;color:var(--gold-bright);margin:24px 0 12px;padding-top:18px;border-top:1px solid rgba(200,169,107,.15);line-height:1.3}
+  .manual-step:first-child{padding-top:0;border-top:none;margin-top:0}
+  .manual-step b{color:var(--ivory);font-style:normal;font-family:Inter,sans-serif;font-weight:600;font-size:18px}
+  .step-note{color:var(--muted);font-size:13.5px;line-height:1.6;margin:0 0 12px;padding:0 2px}
+  .step-note b{color:var(--ivory);font-weight:600}
+  .step-note code{font-family:ui-monospace,"SF Mono",monospace;font-size:12.5px;background:rgba(200,169,107,.12);color:var(--gold-bright);padding:2px 8px;border-radius:5px;word-break:break-all}
+  .big-download{display:flex;align-items:center;gap:14px;background:var(--gold);color:var(--navy-deep);text-decoration:none;padding:18px 22px;border-radius:14px;margin-bottom:18px;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(200,169,107,.22)}
+  .big-download:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(200,169,107,.35)}
+  .big-download svg{width:22px;height:22px;flex-shrink:0}
+  .big-download span{display:flex;flex-direction:column;font-weight:700;letter-spacing:.06em;font-size:14px;line-height:1.2;font-family:Inter,sans-serif}
+  .big-download small{font-family:ui-monospace,"SF Mono",monospace;font-size:11px;font-weight:500;opacity:.7;margin-top:4px;letter-spacing:0}
+  .toggle-list{list-style:none;margin:0 0 12px;padding:0}
+  .toggle-list li{display:flex;align-items:center;gap:12px;padding:10px 0;font-size:14px;color:var(--ivory);border-bottom:1px dashed rgba(200,169,107,.12)}
+  .toggle-list li:last-child{border-bottom:none}
+  .toggle-list li b{color:var(--gold-bright);font-weight:600}
+  .toggle{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:22px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.12em;padding:0 9px;font-family:Inter,sans-serif;flex-shrink:0}
+  .toggle.on{background:#22c55e;color:#053019}
+  .toggle.off{background:#ef4444;color:#3b0a0a}
+  .tracking-strip{background:linear-gradient(135deg,rgba(200,169,107,.08),rgba(0,0,52,.4));border:1px solid rgba(200,169,107,.28);border-radius:18px;padding:32px;margin:42px 24px 0}
+  .tracking-strip h3{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:30px;margin-bottom:18px;text-align:center}
+  .tracking-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:18px}
+  .tracking-label{font-size:11px;letter-spacing:.28em;font-weight:700;text-transform:uppercase;margin-bottom:8px;padding-bottom:8px;border-bottom:1.5px solid currentColor;display:inline-block}
+  .tracking-label.ig-color{color:#E1306C}
+  .tracking-label.fb-color{color:#1877F2}
+  .tracking-grid p{color:var(--ivory);font-size:13.5px;line-height:1.6;margin:0}
+  .tracking-grid p b{color:var(--gold-bright);font-weight:600}
+  .tracking-grid p code{font-family:ui-monospace,monospace;font-size:12px;background:rgba(200,169,107,.12);color:var(--gold-bright);padding:1px 6px;border-radius:4px}
+  .tracking-foot{text-align:center;color:var(--muted);font-size:13px;margin-top:8px;padding-top:18px;border-top:1px solid rgba(200,169,107,.15)}
+  .tracking-foot code{font-family:ui-monospace,monospace;background:rgba(200,169,107,.12);color:var(--gold-bright);padding:1px 6px;border-radius:4px;font-size:12px}
+
   .do-not-post{margin:0 auto 80px;max-width:1280px;padding:0 24px}
   .do-not-post-card{background:linear-gradient(180deg,rgba(239,68,68,.08),rgba(239,68,68,.02));border:1.5px solid rgba(239,68,68,.35);border-radius:18px;padding:28px}
   .do-not-post-card h3{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;font-weight:600;color:#fca5a5;margin-bottom:8px}
@@ -154,12 +184,12 @@
 
 <div class="container">
 
-  <!-- ============ TONIGHT'S POSTING PLAYBOOK ============ -->
+  <!-- ============ TONIGHT'S COPY-PASTE MANUAL ============ -->
   <section class="tonight" id="tonight">
     <div class="tonight-head">
-      <div class="eyebrow">Tonight · Two posts · Zero mistakes</div>
+      <div class="eyebrow">Tonight · Copy-paste manual · Zero mistakes</div>
       <h2>What to post tonight</h2>
-      <p>One post per platform. Each card shows the exact file, the exact size, the exact caption, and the exact upload steps. Green badge = ready. Red strip = do not post.</p>
+      <p>Two posts. One on Instagram, one on Facebook. Follow each step in order. Tap any <b style="color:var(--gold-bright)">Copy</b> button to grab the text exactly as it should be pasted.</p>
     </div>
 
     <div class="platform-grid">
@@ -178,48 +208,37 @@
 
         <div class="platform-body">
 
-          <div class="warn-line"><span>⚠️</span><div><b>Heads up:</b> Captions say <code>@frenchatelier</code>. Your actual handle is <b>@LiveFrenchAtelier</b> — find/replace before pasting.</div></div>
-
-          <dl class="post-spec">
-            <dt>Format</dt><dd><b>Reel</b> (vertical full-screen video)</dd>
-            <dt>File</dt><dd><b>bastille-ad2-sharewin-9x16.mp4</b></dd>
-            <dt>Size</dt><dd>1080 × 1920 px · <b>9:16</b></dd>
-            <dt>Length</dt><dd>14.8 sec · audio on (−17.7 dB)</dd>
-            <dt>Caption</dt><dd>Option 1 · Signature (859 chars · under 2,200 cap)</dd>
-            <dt>Bio link</dt><dd><b>win-paris-fa.vercel.app</b></dd>
-            <dt>First comment</dt><dd>Pin the comment block below (links are not clickable in caption — only in bio + pinned comment)</dd>
-          </dl>
+          <h4 class="manual-step">Step 1 · Download the video</h4>
+          <a class="big-download" href="videos/bastille-ad2-sharewin-9x16.mp4" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+            <span>Download the Instagram video<small>bastille-ad2-sharewin-9x16.mp4 · 1080×1920 · 9:16</small></span>
+          </a>
 
           <div class="video-preview">
             <video src="videos/bastille-ad2-sharewin-9x16.mp4" muted loop playsinline autoplay preload="metadata"></video>
           </div>
 
-          <ol class="step-list">
-            <li><b>Open Instagram</b> → tap <b>+</b> → choose <b>Reel</b>.</li>
-            <li><b>Upload</b> <code>bastille-ad2-sharewin-9x16.mp4</code>. Don't crop — it's already 9:16.</li>
-            <li><b>Cover:</b> let Instagram auto-pick, or scrub to ~0:02 (the Eiffel reveal frame).</li>
-            <li>Tap <b>Next</b> → paste the <b>Reel caption</b> below.</li>
-            <li>Toggle <b>"Also share to Feed"</b> ON. Leave <b>"Share to Facebook"</b> OFF (we're posting FB separately, with a different creative).</li>
-            <li>Tap <b>Share</b>.</li>
-            <li><b>Immediately</b> open your post → <b>tap the comment field</b> → paste the <b>first-comment block</b> below → submit → long-press your own comment → <b>Pin</b>.</li>
-            <li>Confirm your <b>bio link</b> is <code>https://win-paris-fa.vercel.app</code>.</li>
-          </ol>
+          <h4 class="manual-step">Step 2 · Open Instagram → tap <b>+</b> → <b>Reel</b> → upload the video → tap <b>Next</b></h4>
 
+          <h4 class="manual-step">Step 3 · Paste this caption</h4>
           <div class="copy-box">
-            <span class="copy-label">Reel caption · paste into Instagram</span>
+            <span class="copy-label">Instagram caption</span>
             <button class="copy-btn" data-copy="ig-caption">Copy</button>
-<pre id="ig-caption">✨ French Atelier is sending one person a flight to Paris — from your living room to the real thing.
+<pre id="ig-caption">✨ French Atelier is flying you to Paris — from your living room to the real thing.
 
-To celebrate our new social home, we're flying one of you to Paris for Bastille Day.
+To celebrate our new social home, we're sending lucky followers to Paris for Bastille Day.
 
-Here's how to win:
+Here's how to enter:
 1️⃣ Follow @LiveFrenchAtelier
-2️⃣ Share this post to your story with #LiveFrenchAtelier
-3️⃣ Invite 10+ friends to follow us (tag them below 👇)
+2️⃣ Like this post
+3️⃣ Invite 10+ friends to follow @LiveFrenchAtelier
+(Tap our profile → Follow button menu → "Invite friends")
 
-One winner. One flight. One unforgettable 14 juillet.
+The more friends you invite, the more entries you get.
 
-Enter by July 13 — winner announced Bastille Day, July 14, 2026. 🇫🇷
+Free flights. An unforgettable 14 juillet.
+
+Enter by July 13 — winners announced Bastille Day, July 14, 2026. 🇫🇷
 
 🔗 Enter &amp; full rules: link in bio → win-paris-fa.vercel.app
 (Direct link also pinned in the first comment 👇)
@@ -229,8 +248,17 @@ Enter by July 13 — winner announced Bastille Day, July 14, 2026. 🇫🇷
 #LiveFrenchAtelier #FrenchAtelier #Paris #LearnFrench</pre>
           </div>
 
+          <h4 class="manual-step">Step 4 · Before tapping Share</h4>
+          <ul class="toggle-list">
+            <li><span class="toggle on">ON</span> "Also share to Feed"</li>
+            <li><span class="toggle off">OFF</span> "Share to Facebook"</li>
+            <li>Tap <b>Share</b></li>
+          </ul>
+
+          <h4 class="manual-step">Step 5 · Immediately add the first comment &amp; pin it</h4>
+          <p class="step-note">Open your new post → tap comment → paste this → submit → long-press your own comment → <b>Pin</b>. (Instagram captions don't render clickable links — only the pinned comment does.)</p>
           <div class="copy-box">
-            <span class="copy-label">First comment · paste &amp; pin immediately after posting</span>
+            <span class="copy-label">First comment (pin it)</span>
             <button class="copy-btn" data-copy="ig-firstcomment">Copy</button>
 <pre id="ig-firstcomment">✈️ Enter here → https://win-paris-fa.vercel.app
 
@@ -238,16 +266,10 @@ Enter by July 13 — winner announced Bastille Day, July 14, 2026. 🇫🇷
 Giveaway not sponsored by, administered by, or associated with Instagram.</pre>
           </div>
 
-          <div class="rules-strip ok"><b>Why this is the right pick:</b> Ad 2 is the only video that pairs the giveaway hook with the exact share-with-10+-friends mechanic on-card. 9:16 fills the Reels feed, plays full-screen in the IG feed via auto-share, and matches the "one winner" language in the caption.</div>
+          <h4 class="manual-step">Step 6 · Confirm your bio link</h4>
+          <p class="step-note">Bio link must be exactly: <code>https://win-paris-fa.vercel.app</code></p>
 
-          <div class="download-row">
-            <a class="download" href="videos/bastille-ad2-sharewin-9x16.mp4" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>Download MP4
-            </a>
-            <a class="download" href="copy/option-1-signature.txt" download style="background:transparent;color:var(--gold);border:1px solid var(--gold)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6a2 2 0 012 2v14a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>Caption .txt
-            </a>
-          </div>
+          <div class="rules-strip ok"><b>✅ Instagram done.</b></div>
 
         </div>
       </div>
@@ -266,49 +288,41 @@ Giveaway not sponsored by, administered by, or associated with Instagram.</pre>
 
         <div class="platform-body">
 
-          <div class="warn-line"><span>ℹ️</span><div><b>Different creative on purpose.</b> Use the 4:5 leadgen cut here — links are clickable in Facebook captions, so the CTA lives inside the post, not in a pinned comment.</div></div>
+          <div class="warn-line"><span>⚠️</span><div><b>Different video than Instagram.</b> Don't mix them up.</div></div>
 
-          <dl class="post-spec">
-            <dt>Format</dt><dd><b>Feed video post</b> (mobile-first portrait)</dd>
-            <dt>File</dt><dd><b>bastille-ad1-leadgen-4x5.mp4</b></dd>
-            <dt>Size</dt><dd>1080 × 1350 px · <b>4:5</b></dd>
-            <dt>Length</dt><dd>8 sec · audio on (−17.8 dB)</dd>
-            <dt>Caption</dt><dd>FB-optimized rewrite (links inline, no "link in bio")</dd>
-            <dt>CTA link</dt><dd><b>https://win-paris-fa.vercel.app</b> (paste in caption — FB auto-previews)</dd>
-            <dt>Cross-post</dt><dd><b>Do NOT</b> auto-share to Instagram — IG already has its own post tonight</dd>
-          </dl>
+          <h4 class="manual-step">Step 1 · Download the video</h4>
+          <a class="big-download" href="videos/bastille-ad1-leadgen-4x5.mp4" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
+            <span>Download the Facebook video<small>bastille-ad1-leadgen-4x5.mp4 · 1080×1350 · 4:5</small></span>
+          </a>
 
           <div class="video-preview fb-feed">
             <video src="videos/bastille-ad1-leadgen-4x5.mp4" muted loop playsinline autoplay preload="metadata"></video>
           </div>
 
-          <ol class="step-list">
-            <li><b>Open the French Atelier Facebook Page</b> (not your personal profile) → click <b>Create post</b> → <b>Photo/video</b>.</li>
-            <li><b>Upload</b> <code>bastille-ad1-leadgen-4x5.mp4</code>. Facebook will accept the 4:5 portrait natively — do not let it crop to 1:1.</li>
-            <li>Paste the <b>Facebook caption</b> below into the post body. The URL will auto-generate a clickable preview card under the video.</li>
-            <li>Add a <b>Call-to-action button</b>: choose <b>"Learn More"</b> → paste <code>https://win-paris-fa.vercel.app</code>.</li>
-            <li>Set <b>Audience</b> to Public.</li>
-            <li><b>Untick</b> "Also post to Instagram" if the option appears (Meta sometimes pre-checks it).</li>
-            <li>Click <b>Post</b>.</li>
-            <li>After posting, <b>pin to top of Page</b> (⋯ menu → Pin to top) until July 14.</li>
-          </ol>
+          <h4 class="manual-step">Step 2 · On Facebook</h4>
+          <p class="step-note">Open your <b>French Atelier Page</b> (not personal profile) → <b>Create post</b> → <b>Photo/video</b> → upload the video.</p>
 
+          <h4 class="manual-step">Step 3 · Paste this caption</h4>
           <div class="copy-box">
-            <span class="copy-label">Facebook caption · paste into Page post</span>
+            <span class="copy-label">Facebook caption</span>
             <button class="copy-btn" data-copy="fb-caption">Copy</button>
-<pre id="fb-caption">✈️🇫🇷 We're sending one person a free flight to Paris for Bastille Day.
+<pre id="fb-caption">✈️🇫🇷 We're flying followers to Paris for Bastille Day.
 
 French Atelier is celebrating its new social home — and we want you in Paris with us on 14 juillet.
 
-How to enter (60 seconds):
-→ Follow @LiveFrenchAtelier
-→ Share this post to your story with #LiveFrenchAtelier
-→ Invite 10+ friends to follow our page
+Here's how to enter:
+→ Like our page
+→ Like this post
+→ Invite 10+ friends to like our page
+(Click the ⋯ menu on our page → "Invite friends")
 
-One winner. One flight. One unforgettable Bastille Day.
+The more friends you invite, the more entries you get.
+
+A free flight. An unforgettable Bastille Day.
 
 ⏳ Entries close July 13, 2026
-🎉 Winner announced live on Bastille Day, July 14
+🎉 Winners announced live on Bastille Day, July 14
 
 Enter &amp; full rules → https://win-paris-fa.vercel.app
 
@@ -318,18 +332,46 @@ Enter &amp; full rules → https://win-paris-fa.vercel.app
 This promotion is in no way sponsored, endorsed, administered by, or associated with Facebook or Instagram.</pre>
           </div>
 
-          <div class="rules-strip ok"><b>Why this is the right pick:</b> 4:5 is Meta's 2026 recommended Facebook feed ratio — takes ~25% more mobile screen than square. Ad 1 leads with the prize, runs short (8s) for high completion, and the Learn More button + inline URL give two clickable paths to the submission page.</div>
-
-          <div class="download-row">
-            <a class="download" href="videos/bastille-ad1-leadgen-4x5.mp4" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>Download MP4
-            </a>
+          <h4 class="manual-step">Step 4 · Add the CTA button</h4>
+          <p class="step-note">Click <b>Add a button</b> → choose <b>"Learn More"</b> → paste this URL:</p>
+          <div class="copy-box">
+            <span class="copy-label">CTA button URL</span>
+            <button class="copy-btn" data-copy="fb-cta">Copy</button>
+<pre id="fb-cta">https://win-paris-fa.vercel.app</pre>
           </div>
+
+          <h4 class="manual-step">Step 5 · Before clicking Post</h4>
+          <ul class="toggle-list">
+            <li><span class="toggle off">OFF</span> "Also post to Instagram" (uncheck it)</li>
+            <li>Click <b>Post</b></li>
+          </ul>
+
+          <h4 class="manual-step">Step 6 · Pin the post</h4>
+          <p class="step-note">On your new post → click <b>⋯</b> → <b>Pin to top of Page</b>. Keep it pinned until July 14.</p>
+
+          <div class="rules-strip ok"><b>✅ Facebook done.</b></div>
 
         </div>
       </div>
 
     </div>
+
+    <!-- How tracking works -->
+    <div class="tracking-strip">
+      <h3>How you'll track entries</h3>
+      <div class="tracking-grid">
+        <div>
+          <div class="tracking-label ig-color">Instagram</div>
+          <p>Instagram's <b>"Invite friends"</b> flow leaves a record on the inviter's side. When users submit on <code>win-paris-fa.vercel.app</code>, they upload a screenshot of their invite list — that's your proof for the draw.</p>
+        </div>
+        <div>
+          <div class="tracking-label fb-color">Facebook</div>
+          <p>Same flow on Facebook — <b>"Invite friends to like Page"</b> leaves a record. Screenshot at submission = receipt for the draw.</p>
+        </div>
+      </div>
+      <p class="tracking-foot">Make sure <code>win-paris-fa.vercel.app</code> has an "Upload screenshot of your invites" field on the form.</p>
+    </div>
+
   </section>
 
   <!-- ============ DO NOT POST TONIGHT ============ -->
