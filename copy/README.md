@@ -3,7 +3,7 @@
 All 5 caption options. Brand name appears in the first sentence of each.
 
 ## How to use (2026 IG format)
-- Captions aren't clickable — every CTA points to "link in bio." Put **frenchatelier.com** (or contest entry page) in your bio link before posting.
+- Captions aren't clickable on IG — every CTA points to **link in bio**. Put **https://win-paris-fa.vercel.app** in your bio link before posting, AND drop it in the first comment (pin it) on every Reel/Feed post. Stories use the native Link sticker pointing to the same URL.
 - First ~125 characters show before "more," so the hook stays in line one.
 - Hashtags led by `#LiveFrenchAtelier`, kept to a tight 3–5 set.
 - Stories hold the clickable mechanics (Option 5).
