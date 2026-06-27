@@ -41,6 +41,22 @@
   .download:hover{background:var(--gold-bright);transform:translateY(-1px)}
   .download svg{width:14px;height:14px}
 
+  /* Primary submission CTA */
+  .cta-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--navy-deep);text-decoration:none;font-weight:700;letter-spacing:.16em;padding:16px 34px;border-radius:999px;font-size:13px;text-transform:uppercase;transition:background .2s, transform .2s, box-shadow .2s;box-shadow:0 10px 30px rgba(200,169,107,.25)}
+  .cta-primary:hover{background:var(--gold-bright);transform:translateY(-2px);box-shadow:0 16px 40px rgba(200,169,107,.35)}
+  .cta-primary svg{width:16px;height:16px}
+  .header-cta{margin-top:30px}
+  .header-cta .cta-link{display:block;margin-top:14px;color:var(--gold-bright);font-size:13px;letter-spacing:.06em;text-decoration:none;font-family:ui-monospace,"SF Mono",monospace}
+  .header-cta .cta-link:hover{text-decoration:underline}
+  /* Make each ad thumbnail click through to the submission site */
+  .thumb-link{display:block;position:relative;cursor:pointer}
+  .thumb-link .visit-cue{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;background:linear-gradient(to top,rgba(0,0,31,.55),transparent 45%);opacity:0;transition:opacity .25s}
+  .thumb-link:hover .visit-cue{opacity:1}
+  .thumb-link .visit-cue span{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);font-weight:600}
+  .card .body .visit{display:flex;align-items:center;justify-content:center;gap:7px;margin-top:10px;color:var(--gold-bright);text-decoration:none;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;border:1px solid rgba(200,169,107,.35);border-radius:999px;padding:11px 16px;transition:background .2s,border-color .2s}
+  .card .body .visit:hover{background:rgba(200,169,107,.12);border-color:rgba(200,169,107,.6)}
+  .card .body .visit svg{width:13px;height:13px}
+
   .handover{background:linear-gradient(135deg, rgba(200,169,107,.08), rgba(0,0,52,.4));border:1px solid rgba(200,169,107,.3);border-radius:22px;padding:48px;text-align:center;margin-bottom:80px}
   .handover h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:42px;font-weight:600;margin-bottom:10px}
   .handover p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:15px;line-height:1.6}
@@ -64,9 +80,25 @@
   <div class="sub">Three drops. Every size. Ready to upload.</div>
   <div class="hairline"></div>
   <div class="meta">12 final videos · 1 handover bundle</div>
+  <div class="header-cta">
+    <a class="cta-primary" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+      Enter the Giveaway
+    </a>
+    <a class="cta-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener">win-paris-fa.vercel.app</a>
+  </div>
 </header>
 
 <div class="container">
+
+  <div class="handover" style="margin-bottom:64px">
+    <h2>Official Submission Link</h2>
+    <p>Every ad, banner, reel, post caption, and CTA points here. This is the official page for entries and full giveaway details — the destination for the bio link, story link stickers, and pinned comments.</p>
+    <a class="cta-primary" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-6-6l6 6-6 6"/></svg>
+      win-paris-fa.vercel.app
+    </a>
+  </div>
 
   <div>
     <div class="section-title">Ad 1 — Share &amp; Win Leadgen</div>
@@ -74,7 +106,7 @@
     <div class="grid">
 
       <div class="card">
-        <div class="thumb"><video src="videos/bastille-ad1-leadgen-16x9.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-16x9.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb"><video src="videos/bastille-ad1-leadgen-16x9.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-16x9.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">16 : 9 · Landscape</div>
           <div class="label">Feed · YouTube · TV</div>
@@ -83,11 +115,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-1x1"><video src="videos/bastille-ad1-leadgen-1x1.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-1x1"><video src="videos/bastille-ad1-leadgen-1x1.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">1 : 1 · Square</div>
           <div class="label">Instagram Feed</div>
@@ -96,11 +129,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-4x5"><video src="videos/bastille-ad1-leadgen-4x5.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-4x5"><video src="videos/bastille-ad1-leadgen-4x5.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">4 : 5 · Portrait</div>
           <div class="label">Instagram Feed (tall)</div>
@@ -109,11 +143,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-9x16"><video src="videos/bastille-ad1-leadgen-9x16.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-9x16.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-9x16"><video src="videos/bastille-ad1-leadgen-9x16.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad1-leadgen-9x16.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">9 : 16 · Vertical</div>
           <div class="label">Reels · Stories · TikTok</div>
@@ -122,6 +157,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
@@ -134,7 +170,7 @@
     <div class="grid">
 
       <div class="card">
-        <div class="thumb"><video src="videos/bastille-ad2-sharewin-16x9.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-16x9.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb"><video src="videos/bastille-ad2-sharewin-16x9.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-16x9.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">16 : 9 · Landscape</div>
           <div class="label">Feed · YouTube · TV</div>
@@ -143,11 +179,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-1x1"><video src="videos/bastille-ad2-sharewin-1x1.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-1x1"><video src="videos/bastille-ad2-sharewin-1x1.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">1 : 1 · Square</div>
           <div class="label">Instagram Feed</div>
@@ -156,11 +193,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-4x5"><video src="videos/bastille-ad2-sharewin-4x5.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-4x5"><video src="videos/bastille-ad2-sharewin-4x5.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">4 : 5 · Portrait</div>
           <div class="label">Instagram Feed (tall)</div>
@@ -169,11 +207,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-9x16"><video src="videos/bastille-ad2-sharewin-9x16.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-9x16.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-9x16"><video src="videos/bastille-ad2-sharewin-9x16.mp4" muted playsinline preload="metadata" poster="assets/bastille-ad2-sharewin-9x16.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">9 : 16 · Vertical</div>
           <div class="label">Reels · Stories · TikTok</div>
@@ -182,6 +221,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
@@ -194,7 +234,7 @@
     <div class="grid">
 
       <div class="card">
-        <div class="thumb r-1x1"><video src="videos/banner-square-1x1.mp4" muted playsinline preload="metadata" poster="assets/banner-square-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-1x1"><video src="videos/banner-square-1x1.mp4" muted playsinline preload="metadata" poster="assets/banner-square-1x1.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">1 : 1 · Square</div>
           <div class="label">Instagram Feed Banner</div>
@@ -203,11 +243,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-4x5"><video src="videos/banner-feed-4x5.mp4" muted playsinline preload="metadata" poster="assets/banner-feed-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-4x5"><video src="videos/banner-feed-4x5.mp4" muted playsinline preload="metadata" poster="assets/banner-feed-4x5.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">4 : 5 · Portrait</div>
           <div class="label">Instagram Feed (tall)</div>
@@ -216,11 +257,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-9x16"><video src="videos/reel-1-win-flight.mp4" muted playsinline preload="metadata" poster="assets/reel-1-win-flight.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-9x16"><video src="videos/reel-1-win-flight.mp4" muted playsinline preload="metadata" poster="assets/reel-1-win-flight.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">9 : 16 · Vertical</div>
           <div class="label">Reel · Win a Flight</div>
@@ -229,11 +271,12 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
       <div class="card">
-        <div class="thumb r-9x16"><video src="videos/reel-2-three-winners.mp4" muted playsinline preload="metadata" poster="assets/reel-2-three-winners.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video></div>
+        <a class="thumb-link" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><div class="thumb r-9x16"><video src="videos/reel-2-three-winners.mp4" muted playsinline preload="metadata" poster="assets/reel-2-three-winners.jpg" onmouseenter="this.play()" onmouseleave="this.pause()"></video><div class="visit-cue"><span>Enter &amp; Submit →</span></div></div></a>
         <div class="body">
           <div class="size-tag">9 : 16 · Vertical</div>
           <div class="label">Reel · Three Winners</div>
@@ -242,6 +285,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>
             Download MP4
           </a>
+          <a class="visit" href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 3h7v7m0-7L10 14M19 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h5"/></svg>Enter &amp; Submit</a>
         </div>
       </div>
 
@@ -269,7 +313,7 @@
 </div>
 
 <footer>
-  French Atelier by Academia · #LiveFrenchAtelier · <code>frenchatelier.com</code>
+  French Atelier by Academia · #LiveFrenchAtelier · Enter at <code><a href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">win-paris-fa.vercel.app</a></code>
 </footer>
 
 </body>

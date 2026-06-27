@@ -11,7 +11,7 @@ That's it. Every friend you bring is another reason to celebrate the 14th of Jul
 
 ⏳ Enter by July 13, 2026
 🎉 Winner announced Bastille Day — July 14
-🔗 Full details in bio
+🔗 Enter + full details: link in bio
 
 Live French. Live Paris.
 
@@ -19,3 +19,9 @@ Live French. Live Paris.
 
 —
 Not affiliated with or sponsored by Instagram.
+
+═══════════════════════════════════════
+SET BEFORE POSTING (Feed/Carousel — links aren't clickable in captions)
+═══════════════════════════════════════
+• BIO LINK → https://win-paris-fa.vercel.app
+• PINNED FIRST COMMENT → "Enter + full details here 👉 https://win-paris-fa.vercel.app"
