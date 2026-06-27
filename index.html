@@ -72,10 +72,66 @@
   footer{padding:48px 24px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.1em;border-top:1px solid rgba(200,169,107,.12)}
   footer code{font-family:ui-monospace,monospace;color:var(--gold);background:rgba(200,169,107,.08);padding:2px 8px;border-radius:4px}
 
+  /* ============ TONIGHT'S POSTING PLAYBOOK ============ */
+  .tonight{margin:0 auto 80px;max-width:1280px}
+  .tonight-head{text-align:center;margin-bottom:36px;padding:0 24px}
+  .tonight-head .eyebrow{font-size:12px;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;margin-bottom:14px;font-weight:600}
+  .tonight-head h2{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:clamp(38px,5vw,56px);line-height:1.05;margin-bottom:12px}
+  .tonight-head p{color:var(--muted);font-size:15px;max-width:640px;margin:0 auto;line-height:1.6}
+  .platform-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:28px;padding:0 24px}
+  .platform-card{background:linear-gradient(180deg,rgba(243,239,233,.04),rgba(243,239,233,.01));border:1.5px solid rgba(200,169,107,.22);border-radius:22px;overflow:hidden}
+  .platform-card.instagram{border-color:rgba(225,48,108,.45)}
+  .platform-card.facebook{border-color:rgba(24,119,242,.45)}
+  .platform-header{padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid rgba(200,169,107,.15)}
+  .platform-header.ig{background:linear-gradient(135deg,rgba(225,48,108,.18),rgba(241,89,42,.12),rgba(247,119,55,.08))}
+  .platform-header.fb{background:rgba(24,119,242,.14)}
+  .platform-id{display:flex;align-items:center;gap:14px}
+  .platform-logo{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .platform-logo.ig{background:radial-gradient(circle at 30% 110%,#fd1d1d 0%,#f56040 25%,#fcaf45 50%,#833ab4 75%,#405de6 100%)}
+  .platform-logo.fb{background:#1877F2}
+  .platform-logo svg{width:22px;height:22px;fill:#fff}
+  .platform-name{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;font-weight:600;line-height:1}
+  .platform-name small{display:block;font-family:Inter,sans-serif;font-style:normal;font-size:10px;letter-spacing:.28em;color:var(--gold);text-transform:uppercase;margin-top:6px;font-weight:600}
+  .platform-body{padding:26px}
+  .post-spec{display:grid;grid-template-columns:140px 1fr;gap:10px 16px;font-size:13px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(200,169,107,.12)}
+  .post-spec dt{color:var(--gold);letter-spacing:.12em;text-transform:uppercase;font-size:10px;font-weight:700;padding-top:3px}
+  .post-spec dd{color:var(--ivory);font-family:ui-monospace,"SF Mono",monospace;font-size:12.5px;line-height:1.5}
+  .post-spec dd b{font-family:Inter,sans-serif;color:var(--gold-bright);font-weight:600}
+  .video-preview{aspect-ratio:9/16;max-height:520px;background:#000;border-radius:14px;overflow:hidden;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;position:relative}
+  .video-preview.fb-feed{aspect-ratio:4/5;max-height:520px}
+  .video-preview video{width:100%;height:100%;object-fit:cover}
+  .step-list{counter-reset:step;margin:0 0 22px;padding:0;list-style:none}
+  .step-list li{counter-increment:step;position:relative;padding:10px 0 10px 38px;font-size:13.5px;line-height:1.5;color:var(--ivory);border-bottom:1px dashed rgba(200,169,107,.12)}
+  .step-list li:last-child{border-bottom:none}
+  .step-list li::before{content:counter(step);position:absolute;left:0;top:10px;width:26px;height:26px;border-radius:50%;background:rgba(200,169,107,.18);border:1px solid var(--gold);color:var(--gold-bright);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif}
+  .step-list li b{color:var(--gold-bright);font-weight:600}
+  .step-list li code{font-family:ui-monospace,"SF Mono",monospace;font-size:11.5px;background:rgba(200,169,107,.12);color:var(--gold-bright);padding:2px 7px;border-radius:5px;word-break:break-all}
+  .copy-box{background:rgba(0,0,0,.4);border:1px solid rgba(200,169,107,.2);border-radius:12px;padding:16px;margin:14px 0;position:relative}
+  .copy-box pre{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:12px;line-height:1.55;color:var(--ivory);white-space:pre-wrap;word-wrap:break-word;max-height:280px;overflow-y:auto}
+  .copy-label{display:block;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:700}
+  .copy-btn{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--navy-deep);border:none;padding:7px 14px;border-radius:999px;font-size:10px;letter-spacing:.18em;font-weight:700;text-transform:uppercase;cursor:pointer;font-family:Inter,sans-serif;transition:background .15s}
+  .copy-btn:hover{background:var(--gold-bright)}
+  .copy-btn.copied{background:#22c55e;color:#fff}
+  .download-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .download-row .download{flex:1;min-width:160px;font-size:11px;padding:13px 14px}
+  .rules-strip{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.25);border-radius:12px;padding:14px 18px;margin-top:18px;font-size:12.5px;color:#fca5a5;line-height:1.55}
+  .rules-strip b{color:#fecaca;font-weight:700}
+  .rules-strip.ok{background:rgba(34,197,94,.06);border-color:rgba(34,197,94,.28);color:#86efac}
+  .rules-strip.ok b{color:#bbf7d0}
+  .warn-line{display:flex;gap:10px;padding:12px 16px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.3);border-radius:10px;margin-bottom:20px;font-size:12.5px;color:#fcd34d;line-height:1.5}
+  .warn-line b{color:#fde68a}
+  .warn-line code{font-family:ui-monospace,monospace;background:rgba(245,158,11,.15);padding:1px 6px;border-radius:4px;font-size:11.5px}
+  .do-not-post{margin:0 auto 80px;max-width:1280px;padding:0 24px}
+  .do-not-post-card{background:linear-gradient(180deg,rgba(239,68,68,.08),rgba(239,68,68,.02));border:1.5px solid rgba(239,68,68,.35);border-radius:18px;padding:28px}
+  .do-not-post-card h3{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:28px;font-weight:600;color:#fca5a5;margin-bottom:8px}
+  .do-not-post-card p{color:#fecaca;font-size:13.5px;line-height:1.6;max-width:720px}
+
   @media (max-width:640px){
     header{padding:56px 20px 40px}
     .container{padding:48px 18px}
     .handover{padding:32px 22px}
+    .platform-grid{grid-template-columns:1fr;padding:0 18px}
+    .post-spec{grid-template-columns:110px 1fr;gap:8px 12px}
   }
 </style>
 </head>
@@ -97,6 +153,193 @@
 </header>
 
 <div class="container">
+
+  <!-- ============ TONIGHT'S POSTING PLAYBOOK ============ -->
+  <section class="tonight" id="tonight">
+    <div class="tonight-head">
+      <div class="eyebrow">Tonight · Two posts · Zero mistakes</div>
+      <h2>What to post tonight</h2>
+      <p>One post per platform. Each card shows the exact file, the exact size, the exact caption, and the exact upload steps. Green badge = ready. Red strip = do not post.</p>
+    </div>
+
+    <div class="platform-grid">
+
+      <!-- =================== INSTAGRAM CARD =================== -->
+      <div class="platform-card instagram">
+        <div class="platform-header ig">
+          <div class="platform-id">
+            <div class="platform-logo ig">
+              <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.43.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38c-.42.42-.82.68-1.38.9-.43.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.43-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.43-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.13 5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+            </div>
+            <div class="platform-name">Instagram<small>Tonight's post</small></div>
+          </div>
+          <div class="status-badge approved" style="margin-bottom:0"><span class="dot"></span>Ready</div>
+        </div>
+
+        <div class="platform-body">
+
+          <div class="warn-line"><span>⚠️</span><div><b>Heads up:</b> Captions say <code>@frenchatelier</code>. Your actual handle is <b>@LiveFrenchAtelier</b> — find/replace before pasting.</div></div>
+
+          <dl class="post-spec">
+            <dt>Format</dt><dd><b>Reel</b> (vertical full-screen video)</dd>
+            <dt>File</dt><dd><b>bastille-ad2-sharewin-9x16.mp4</b></dd>
+            <dt>Size</dt><dd>1080 × 1920 px · <b>9:16</b></dd>
+            <dt>Length</dt><dd>14.8 sec · audio on (−17.7 dB)</dd>
+            <dt>Caption</dt><dd>Option 1 · Signature (859 chars · under 2,200 cap)</dd>
+            <dt>Bio link</dt><dd><b>win-paris-fa.vercel.app</b></dd>
+            <dt>First comment</dt><dd>Pin the comment block below (links are not clickable in caption — only in bio + pinned comment)</dd>
+          </dl>
+
+          <div class="video-preview">
+            <video src="videos/bastille-ad2-sharewin-9x16.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          </div>
+
+          <ol class="step-list">
+            <li><b>Open Instagram</b> → tap <b>+</b> → choose <b>Reel</b>.</li>
+            <li><b>Upload</b> <code>bastille-ad2-sharewin-9x16.mp4</code>. Don't crop — it's already 9:16.</li>
+            <li><b>Cover:</b> let Instagram auto-pick, or scrub to ~0:02 (the Eiffel reveal frame).</li>
+            <li>Tap <b>Next</b> → paste the <b>Reel caption</b> below.</li>
+            <li>Toggle <b>"Also share to Feed"</b> ON. Leave <b>"Share to Facebook"</b> OFF (we're posting FB separately, with a different creative).</li>
+            <li>Tap <b>Share</b>.</li>
+            <li><b>Immediately</b> open your post → <b>tap the comment field</b> → paste the <b>first-comment block</b> below → submit → long-press your own comment → <b>Pin</b>.</li>
+            <li>Confirm your <b>bio link</b> is <code>https://win-paris-fa.vercel.app</code>.</li>
+          </ol>
+
+          <div class="copy-box">
+            <span class="copy-label">Reel caption · paste into Instagram</span>
+            <button class="copy-btn" data-copy="ig-caption">Copy</button>
+<pre id="ig-caption">✨ French Atelier is sending one person a flight to Paris — from your living room to the real thing.
+
+To celebrate our new social home, we're flying one of you to Paris for Bastille Day.
+
+Here's how to win:
+1️⃣ Follow @LiveFrenchAtelier
+2️⃣ Share this post to your story with #LiveFrenchAtelier
+3️⃣ Invite 10+ friends to follow us (tag them below 👇)
+
+One winner. One flight. One unforgettable 14 juillet.
+
+Enter by July 13 — winner announced Bastille Day, July 14, 2026. 🇫🇷
+
+🔗 Enter &amp; full rules: link in bio → win-paris-fa.vercel.app
+(Direct link also pinned in the first comment 👇)
+
+À bientôt à Paris.
+
+#LiveFrenchAtelier #FrenchAtelier #Paris #LearnFrench</pre>
+          </div>
+
+          <div class="copy-box">
+            <span class="copy-label">First comment · paste &amp; pin immediately after posting</span>
+            <button class="copy-btn" data-copy="ig-firstcomment">Copy</button>
+<pre id="ig-firstcomment">✈️ Enter here → https://win-paris-fa.vercel.app
+
+—
+Giveaway not sponsored by, administered by, or associated with Instagram.</pre>
+          </div>
+
+          <div class="rules-strip ok"><b>Why this is the right pick:</b> Ad 2 is the only video that pairs the giveaway hook with the exact share-with-10+-friends mechanic on-card. 9:16 fills the Reels feed, plays full-screen in the IG feed via auto-share, and matches the "one winner" language in the caption.</div>
+
+          <div class="download-row">
+            <a class="download" href="videos/bastille-ad2-sharewin-9x16.mp4" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>Download MP4
+            </a>
+            <a class="download" href="copy/option-1-signature.txt" download style="background:transparent;color:var(--gold);border:1px solid var(--gold)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6a2 2 0 012 2v14a2 2 0 01-2 2H9a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>Caption .txt
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- =================== FACEBOOK CARD =================== -->
+      <div class="platform-card facebook">
+        <div class="platform-header fb">
+          <div class="platform-id">
+            <div class="platform-logo fb">
+              <svg viewBox="0 0 24 24"><path d="M24 12a12 12 0 10-13.87 11.85v-8.38h-3.05V12h3.05V9.36c0-3 1.79-4.67 4.53-4.67 1.31 0 2.69.23 2.69.23v2.96h-1.52c-1.49 0-1.96.93-1.96 1.88V12h3.33l-.53 3.47h-2.8v8.38A12 12 0 0024 12z"/></svg>
+            </div>
+            <div class="platform-name">Facebook<small>Tonight's post</small></div>
+          </div>
+          <div class="status-badge approved" style="margin-bottom:0"><span class="dot"></span>Ready</div>
+        </div>
+
+        <div class="platform-body">
+
+          <div class="warn-line"><span>ℹ️</span><div><b>Different creative on purpose.</b> Use the 4:5 leadgen cut here — links are clickable in Facebook captions, so the CTA lives inside the post, not in a pinned comment.</div></div>
+
+          <dl class="post-spec">
+            <dt>Format</dt><dd><b>Feed video post</b> (mobile-first portrait)</dd>
+            <dt>File</dt><dd><b>bastille-ad1-leadgen-4x5.mp4</b></dd>
+            <dt>Size</dt><dd>1080 × 1350 px · <b>4:5</b></dd>
+            <dt>Length</dt><dd>8 sec · audio on (−17.8 dB)</dd>
+            <dt>Caption</dt><dd>FB-optimized rewrite (links inline, no "link in bio")</dd>
+            <dt>CTA link</dt><dd><b>https://win-paris-fa.vercel.app</b> (paste in caption — FB auto-previews)</dd>
+            <dt>Cross-post</dt><dd><b>Do NOT</b> auto-share to Instagram — IG already has its own post tonight</dd>
+          </dl>
+
+          <div class="video-preview fb-feed">
+            <video src="videos/bastille-ad1-leadgen-4x5.mp4" muted loop playsinline autoplay preload="metadata"></video>
+          </div>
+
+          <ol class="step-list">
+            <li><b>Open the French Atelier Facebook Page</b> (not your personal profile) → click <b>Create post</b> → <b>Photo/video</b>.</li>
+            <li><b>Upload</b> <code>bastille-ad1-leadgen-4x5.mp4</code>. Facebook will accept the 4:5 portrait natively — do not let it crop to 1:1.</li>
+            <li>Paste the <b>Facebook caption</b> below into the post body. The URL will auto-generate a clickable preview card under the video.</li>
+            <li>Add a <b>Call-to-action button</b>: choose <b>"Learn More"</b> → paste <code>https://win-paris-fa.vercel.app</code>.</li>
+            <li>Set <b>Audience</b> to Public.</li>
+            <li><b>Untick</b> "Also post to Instagram" if the option appears (Meta sometimes pre-checks it).</li>
+            <li>Click <b>Post</b>.</li>
+            <li>After posting, <b>pin to top of Page</b> (⋯ menu → Pin to top) until July 14.</li>
+          </ol>
+
+          <div class="copy-box">
+            <span class="copy-label">Facebook caption · paste into Page post</span>
+            <button class="copy-btn" data-copy="fb-caption">Copy</button>
+<pre id="fb-caption">✈️🇫🇷 We're sending one person a free flight to Paris for Bastille Day.
+
+French Atelier is celebrating its new social home — and we want you in Paris with us on 14 juillet.
+
+How to enter (60 seconds):
+→ Follow @LiveFrenchAtelier
+→ Share this post to your story with #LiveFrenchAtelier
+→ Invite 10+ friends to follow our page
+
+One winner. One flight. One unforgettable Bastille Day.
+
+⏳ Entries close July 13, 2026
+🎉 Winner announced live on Bastille Day, July 14
+
+Enter &amp; full rules → https://win-paris-fa.vercel.app
+
+#LiveFrenchAtelier #FrenchAtelier #BastilleDay2026 #Paris #LearnFrench
+
+—
+This promotion is in no way sponsored, endorsed, administered by, or associated with Facebook or Instagram.</pre>
+          </div>
+
+          <div class="rules-strip ok"><b>Why this is the right pick:</b> 4:5 is Meta's 2026 recommended Facebook feed ratio — takes ~25% more mobile screen than square. Ad 1 leads with the prize, runs short (8s) for high completion, and the Learn More button + inline URL give two clickable paths to the submission page.</div>
+
+          <div class="download-row">
+            <a class="download" href="videos/bastille-ad1-leadgen-4x5.mp4" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14"/></svg>Download MP4
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ DO NOT POST TONIGHT ============ -->
+  <section class="do-not-post">
+    <div class="do-not-post-card">
+      <div class="status-badge hold"><span class="dot"></span>Do not post tonight · On either platform</div>
+      <h3>Ad 3 — Banners &amp; Reels Drop</h3>
+      <p>The Ad 3 set (feed-banner-4x5, square-banner-1x1, reel-1-win-flight, reel-2-three-winners) is technically clean but the on-card copy says <b>"3 winners"</b> / <b>"Three Winners"</b> while tonight's Instagram and Facebook captions both say <b>"one winner."</b> Posting any Ad 3 asset alongside tonight's post will create a visible prize-count contradiction. Hold until the copy is harmonized.</p>
+    </div>
+  </section>
 
   <div class="handover" style="margin-bottom:64px">
     <h2>Official Submission Link</h2>
@@ -326,5 +569,26 @@
   French Atelier by Academia · #LiveFrenchAtelier · Enter at <code><a href="https://win-paris-fa.vercel.app" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">win-paris-fa.vercel.app</a></code>
 </footer>
 
+<script>
+document.querySelectorAll('.copy-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var id = btn.getAttribute('data-copy');
+    var el = document.getElementById(id);
+    if(!el) return;
+    var text = el.innerText;
+    navigator.clipboard.writeText(text).then(function(){
+      var old = btn.textContent;
+      btn.textContent = 'Copied ✓';
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = old; btn.classList.remove('copied'); }, 1800);
+    }).catch(function(){
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); btn.textContent='Copied ✓'; btn.classList.add('copied'); setTimeout(function(){btn.textContent='Copy'; btn.classList.remove('copied');},1800);}catch(e){}
+      document.body.removeChild(ta);
+    });
+  });
+});
+</script>
 </body>
 </html>
